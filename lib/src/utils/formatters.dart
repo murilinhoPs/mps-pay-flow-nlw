@@ -4,9 +4,11 @@ String toCurrency({
   required num value,
   String locale = 'pt-BR',
 }) {
-  return NumberFormat.simpleCurrency(
+  final formattedNumber = NumberFormat.simpleCurrency(
     locale: locale,
-  ).format(value).replaceAll(String.fromCharCode(0x00A0), ' ');
+  ).format(value);
+
+  return formattedNumber;
 }
 
 DateTime toDateTime({
