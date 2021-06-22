@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pay_flow/src/application/routes/routes.dart';
+import 'package:pay_flow/src/application/core/routes/routes.dart';
 
 class AppWidget extends StatelessWidget {
   final String title;
@@ -17,6 +17,9 @@ class AppWidget extends StatelessWidget {
       title: title,
       theme: ThemeData(
         primarySwatch: Colors.amber,
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: Colors.white.withOpacity(0.8),
+        ),
       ),
       initialRoute: RoutesNames.loginPage,
       onGenerateRoute: AppRouter.generateRoutes,
