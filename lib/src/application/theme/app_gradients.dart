@@ -11,7 +11,7 @@ class AppGradients {
 
   static const radialAppBar = RadialGradient(
     colors: [
-      AppColors.primaryAccent,
+      AppColors.primaryLight2,
       AppColors.primary,
     ],
     stops: [0.03, 0.7],
