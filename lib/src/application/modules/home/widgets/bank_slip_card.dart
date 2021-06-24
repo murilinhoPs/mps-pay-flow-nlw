@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pay_flow/src/application/theme/app_text_styles.dart';
 import 'package:pay_flow/src/utils/reg_ex.dart';
 import 'package:pay_flow/src/utils/strings.dart';
 import 'package:pay_flow/src/application/theme/theme.dart';
@@ -44,57 +45,52 @@ class BankSlipCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  name,
-                  style: TextStyle(
-                    color: AppColors.textHeading,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                RichText(
-                  text: TextSpan(
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.textBody,
-                    ),
-                    children: [
-                      TextSpan(text: '$currency '),
-                      TextSpan(
-                        text: totalCost,
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                bankSlipName(),
+                bankSlipValueInCurrency(),
               ],
             ),
             SizedBox(height: 4.0),
-            RichText(
-              text: TextSpan(
-                style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w400,
-                  color: AppColors.textBody,
-                ),
-                children: [
-                  TextSpan(text: '${Strings.expiresIn} '),
-                  TextSpan(
-                    text: dueDate,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            // SizedBox(height: 32),
+            dueDateText(),
           ],
         ),
       ),
     );
   }
+
+  Widget bankSlipName() => Text(
+        name,
+        style: AppTextStyles.titleListTileBold,
+      );
+
+  Widget bankSlipValueInCurrency() => RichText(
+        text: TextSpan(
+          text: '$currency ',
+          style: AppTextStyles.titleTrailingRegular,
+          children: [
+            TextSpan(
+              text: totalCost,
+              style: AppTextStyles.titleTrailingBold,
+            ),
+          ],
+        ),
+      );
+
+  Widget dueDateText() => RichText(
+        text: TextSpan(
+          style: TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w400,
+            color: AppColors.body,
+          ),
+          text: '${Strings.expiresIn} ',
+          children: [
+            TextSpan(
+              text: dueDate,
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        ),
+      );
 }
