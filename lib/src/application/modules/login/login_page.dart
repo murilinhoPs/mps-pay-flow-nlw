@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pay_flow/src/application/theme/theme.dart';
 import 'package:pay_flow/src/utils/strings.dart';
 import 'package:flutter_signin_button/button_view.dart';
-import 'package:pay_flow/src/application/theme/app_assets.dart';
-import 'package:pay_flow/src/application/theme/app_colors.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:pay_flow/src/application/core/routes/routes.dart';
 import 'package:pay_flow/src/application/theme/app_gradients.dart';
@@ -51,16 +50,12 @@ class _LoginPageState extends State<LoginPage> {
                   Text(
                     Strings.organizeBankSlips,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: AppColors.textHeading,
-                      height: 1.44,
-                      fontSize: 32,
-                      fontWeight: FontWeight.w600,
-                    ),
+                    style: AppTextStyles.titleHome,
                   ),
                   SizedBox(height: 40),
                   SignInButton(
                     Buttons.Google,
+                    text: Strings.signInWithGoogle,
                     onPressed: () {
                       print('google login');
                       Navigator.pushReplacementNamed(
