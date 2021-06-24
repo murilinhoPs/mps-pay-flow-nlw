@@ -18,4 +18,5 @@ class Strings {
   static const String youHaveRegistered = 'Você tem';
   static const String registeredBankSlipsToPay = 'cadastrados para pagar';
   static const String registeredBankSlipToPay = 'cadastrado para pagar';
+  static const String signInWithGoogle = 'Entrar com Google';
 }
