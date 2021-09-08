@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pay_flow/src/application/core/view_models/bank_slip_view_model.dart';
-import 'package:pay_flow/src/application/modules/home/widgets/app_bar/bank_slip_card.dart';
+import 'package:pay_flow/src/application/modules/home/widgets/bank_slip_card.dart';
 import 'package:pay_flow/src/application/modules/home/widgets/app_bar/home_app_bar.dart';
 import 'package:pay_flow/src/application/modules/home/widgets/list_header.dart';
 import 'package:pay_flow/src/domain/entities/bank_slip.dart';

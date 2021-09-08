@@ -4,10 +4,12 @@ import 'package:pay_flow/src/application/theme/theme.dart';
 
 class UserInfo extends StatelessWidget {
   final String? userPicUrl;
+  final String userName;
 
   const UserInfo({
     Key? key,
     this.userPicUrl,
+    required this.userName,
   }) : super(key: key);
 
   @override
@@ -20,7 +22,7 @@ class UserInfo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             welcomeMessage(),
-            payBillsMessage,
+            payBillsMessage(),
           ],
         ),
         profilePic(),
@@ -28,47 +30,35 @@ class UserInfo extends StatelessWidget {
     );
   }
 
-  Widget welcomeMessage() {
-    return RichText(
-      text: TextSpan(
-        style: TextStyle(
-          fontSize: 20,
-          height: 2.5,
-        ),
-        children: [
-          TextSpan(text: 'Olá, '),
-          TextSpan(
-            text: 'Murilo',
-            style: TextStyle(
-              fontWeight: FontWeight.w600,
+  Widget welcomeMessage() => RichText(
+        text: TextSpan(
+          text: '${Strings.helloWelcome}, ',
+          style: AppTextStyles.titleRegularLight.copyWith(height: 2.5),
+          children: [
+            TextSpan(
+              text: userName,
+              style: AppTextStyles.titleBoldLight,
             ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget get payBillsMessage => Text(
-        Strings.keepYourBillsUpToDate,
-        style: TextStyle(
-          fontSize: 13,
-          color: AppColors.textBodyLight,
+          ],
         ),
       );
 
-  Widget profilePic() {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(8.0),
-      child: Image.network(
-        userPicUrl ?? '',
-        width: 60,
-        errorBuilder: (context, exception, StackTrace? stackTrace) {
-          return Text(
-            '😢',
-            style: TextStyle(fontSize: 36),
-          );
-        },
-      ),
-    );
-  }
+  Widget payBillsMessage() => Text(
+        Strings.keepYourBillsUpToDate,
+        style: AppTextStyles.captionLight,
+      );
+
+  Widget profilePic() => ClipRRect(
+        borderRadius: BorderRadius.circular(8.0),
+        child: Image.network(
+          userPicUrl ?? '',
+          width: 60,
+          errorBuilder: (context, exception, StackTrace? stackTrace) {
+            return Text(
+              '😢',
+              style: TextStyle(fontSize: 36),
+            );
+          },
+        ),
+      );
 }

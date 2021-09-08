@@ -22,19 +22,11 @@ class ListHeader extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: TextStyle(
-                  color: AppColors.textHeading,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: AppTextStyles.titleBoldHeading,
               ),
               Text(
                 titleDetails,
-                style: TextStyle(
-                  color: AppColors.textBody,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                ),
+                style: AppTextStyles.trailingBody,
               ),
             ],
           ),

@@ -49,18 +49,12 @@ class RegisteredBankSlipCard extends StatelessWidget {
 
   Widget get cardDescription => RichText(
         text: TextSpan(
-          style: TextStyle(
-            fontSize: 14,
-            height: 2.0,
-            fontWeight: FontWeight.w400,
-          ),
+          style: AppTextStyles.buttonLight.copyWith(height: 2),
           children: [
             TextSpan(text: '${Strings.youHaveRegistered} '),
             TextSpan(
               text: bankSlipCountDetails,
-              style: TextStyle(
-                fontWeight: FontWeight.w700,
-              ),
+              style: AppTextStyles.buttonBoldLight,
             ),
             TextSpan(text: ' $registeredBankSlips'),
           ],

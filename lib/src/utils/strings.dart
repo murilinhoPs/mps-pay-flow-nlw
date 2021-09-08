@@ -16,6 +16,7 @@ class Strings {
   static const String keepYourBillsUpToDate = 'Mantenha suas contas em dia';
   static const String emptyBankSlip = 'nenhum boleto';
   static const String youHaveRegistered = 'Você tem';
+  static const String helloWelcome = 'Olá';
   static const String registeredBankSlipsToPay = 'cadastrados para pagar';
   static const String registeredBankSlipToPay = 'cadastrado para pagar';
   static const String signInWithGoogle = 'Entrar com Google';

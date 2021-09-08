@@ -16,13 +16,19 @@ class AppTextStyles {
     color: AppColors.heading,
   );
 
+  static final titleRegularLight = GoogleFonts.lexendDeca(
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
+    color: Colors.white,
+  );
+
   static final titleBoldHeading = GoogleFonts.lexendDeca(
     fontSize: 20,
     fontWeight: FontWeight.w600,
     color: AppColors.heading,
   );
 
-  static final titleBoldBackground = GoogleFonts.lexendDeca(
+  static final titleBoldLight = GoogleFonts.lexendDeca(
     fontSize: 20,
     fontWeight: FontWeight.w600,
     color: Colors.white,
@@ -69,7 +75,7 @@ class AppTextStyles {
     color: AppColors.grey,
   );
 
-  static final buttonBackground = GoogleFonts.inter(
+  static final buttonLight = GoogleFonts.inter(
     fontSize: 14,
     fontWeight: FontWeight.w400,
     color: Colors.white,
@@ -89,38 +95,44 @@ class AppTextStyles {
     fontWeight: FontWeight.w700,
     color: AppColors.grey,
   );
-  static final buttonBoldBackground = GoogleFonts.inter(
+  static final buttonBoldLight = GoogleFonts.inter(
     fontSize: 14,
     fontWeight: FontWeight.w700,
     color: Colors.white,
   );
-  static final captionBackground = GoogleFonts.lexendDeca(
-    fontSize: 13,
+  static final trailingBody = GoogleFonts.inter(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: AppColors.body,
+  );
+
+  static final captionLight = GoogleFonts.lexendDeca(
+    fontSize: 12,
     fontWeight: FontWeight.w400,
     color: Colors.white,
   );
   static final captionShape = GoogleFonts.lexendDeca(
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: FontWeight.w400,
     color: AppColors.bodyLight,
   );
   static final captionBody = GoogleFonts.lexendDeca(
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: FontWeight.w400,
     color: AppColors.body,
   );
-  static final captionBoldBackground = GoogleFonts.lexendDeca(
-    fontSize: 13,
+  static final captionBoldLight = GoogleFonts.lexendDeca(
+    fontSize: 12,
     fontWeight: FontWeight.w600,
     color: Colors.white,
   );
   static final captionBoldShape = GoogleFonts.lexendDeca(
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: FontWeight.w600,
     color: AppColors.bodyLight,
   );
   static final captionBoldBody = GoogleFonts.lexendDeca(
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: FontWeight.w600,
     color: AppColors.body,
   );

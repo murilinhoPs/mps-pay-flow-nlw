@@ -30,6 +30,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
             padding:
                 EdgeInsets.only(bottom: showRegistered ? 34.0 : 0.0, top: 8.0),
             child: UserInfo(
+              userName: 'Murilo',
               userPicUrl:
                   'https://avatars.githubusercontent.com/u/36513735?v=4',
             ),
